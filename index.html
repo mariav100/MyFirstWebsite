@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Maria Vernik Photography </title>
+      <link rel="stylesheet" type="text/css" href="main.css"> 
+  </head>
+    <body>
+      <header>
+        
+        <img id="logo" src="./images/LOGO.jpg" alt="logo">
+        
+            <div class="topnav"> 
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About</a>
+              <a href="./gallery.html">Gallery</a>
+              <a href="./contact.html">Contact</a>       
+            </div>
+      
+    
+      </header>
+      
+        <div class="container">
+             <img name="slide" width="800" heigth="500" padding="50"></div>
+                  <h3>"The whole point of taking pictures is so that you do not have to explain things with words." - Elliott Erwitt </h3>
+                 
+                  <h3>"One does not stop seeing. One does not stop framing. It does not turn off and turn on. It is on all the time." - Annie Leibovitz</h3>
+                  
+                  <h3>"What I like about photographs is that they capture a moment that is gone forever, impossible to reproduce." - Karl Lagerfeld </h3>
+         
+        
+    </body> 
+            
+<script>   
+  var i = 0; 			
+  var images = [];
+  var time = 3000;	
+	 
+  images[0] = "images/travel.jpg";
+  images[1] = "images/IMG_3457.jpg";
+  images[2] = "images/IMG_1551.jpg";
+  images[3] = "images/111.jpg";
+  images[4] = "images/1313.jpg";
+
+
+  function changeImg(){
+	document.slide.src = images[i];
+
+	if(i < images.length - 1){
+	  i++; 
+	} else { 
+		i = 0;
+	}
+
+	setTimeout("changeImg()", time);
+}
+
+window.onload=changeImg;
+
+</script>
+        
+</html>
+
